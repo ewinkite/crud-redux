@@ -41,8 +41,8 @@ function DetailPage() {
       <div id="Header" css={style.header}>
         <div css={style.title}>{item.title}</div>
         <div id="btnWrap">
-          <DefaultBtn text={"수정"} onClick={handleEdit}></DefaultBtn>
-          <DefaultBtn text={"삭제"} onClick={handleDel}></DefaultBtn>
+          <DefaultBtn text={"수정하기"} onClick={handleEdit}></DefaultBtn>
+          <DefaultBtn text={"삭제하기"} onClick={handleDel}></DefaultBtn>
         </div>
       </div>
       <div id="SubHeader" css={style.subHeader}>

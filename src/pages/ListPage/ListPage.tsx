@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import * as style from "./ListPage.style";
 import Item from "../../components/ListPage/Item";
 import { props } from "../../App";
+import { useEffect } from "react";
 
 const ListPage = ({ items }: props) => {
   const navigate = useNavigate();

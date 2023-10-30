@@ -11,6 +11,7 @@ import {
   uploadBytesResumable
 } from "firebase/storage";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const AddPage = () => {
   //에디터 관련 hook
@@ -62,6 +63,9 @@ const AddPage = () => {
           update: Date()
         });
       });
+    } else {
+      toast.error("입력필드를 모두 채워주세요");
+      return;
     }
     navigate("/list");
   };
