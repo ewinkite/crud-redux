@@ -29,7 +29,7 @@ function App() {
       setItems(itemList);
     }
     getItems();
-  }, []);
+  }, [items]);
 
   return <AppRouter items={items} />;
 }

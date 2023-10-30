@@ -8,10 +8,18 @@ import {
 } from "./pages/pageIndex";
 import Header from "./components/common/Header";
 import { props } from "./App";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const AppRouter = ({ items }: props) => {
   return (
     <BrowserRouter>
+      <ToastContainer
+        position="top-right"
+        theme="light"
+        pauseOnHover
+        autoClose={1500}
+      />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
