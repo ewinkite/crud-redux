@@ -1,7 +1,7 @@
 import * as style from "./EditPage.style";
 import DefaultBtn from "../../components/common/DefaultBtn";
-import { ChangeEvent, useEffect, useState } from "react";
-import MDEditor, { ContextStore } from "@uiw/react-md-editor";
+import { useEffect, useState } from "react";
+import MDEditor from "@uiw/react-md-editor";
 import { doc, setDoc, getDoc, updateDoc } from "firebase/firestore";
 import { db } from "../../firebase";
 import {
@@ -24,7 +24,7 @@ const EditPage = () => {
   const navigate = useNavigate();
 
   // id에 해당되는 post data불러오기
-  const itemData = useEffect(() => {
+  useEffect(() => {
     const getContent = async () => {
       if (id) {
         const docRef = doc(db, "posts", id);

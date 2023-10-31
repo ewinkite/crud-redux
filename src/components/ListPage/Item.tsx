@@ -10,7 +10,7 @@ interface props {
   tag: string;
 }
 
-function Item({ id, mainImg, value, title, workTerm, tag }: props) {
+function Item({ id, mainImg, title, workTerm, tag }: props) {
   const navigate = useNavigate();
 
   function handleItemDetail() {
