@@ -13,7 +13,7 @@ function DetailPage() {
   const { id } = useParams();
 
   // id에 해당되는 post data불러오기
-  const itemData = useEffect(() => {
+  useEffect(() => {
     const getContent = async () => {
       if (id) {
         const docRef = doc(db, "posts", id);

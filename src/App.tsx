@@ -17,7 +17,7 @@ export interface props {
 function App() {
   const [items, setItems] = useState<any>([]);
 
-  const itemObj = useEffect(() => {
+  useEffect(() => {
     async function getItems() {
       const querySnapshot = await getDocs(
         query(collection(db, "posts"), orderBy("update", "desc"))
@@ -29,7 +29,7 @@ function App() {
       setItems(itemList);
     }
     getItems();
-  }, [items]);
+  }, []);
 
   return <AppRouter items={items} />;
 }
