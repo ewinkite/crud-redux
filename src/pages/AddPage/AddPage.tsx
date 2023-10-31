@@ -2,7 +2,7 @@ import * as style from "./AddPage.style";
 import DefaultBtn from "../../components/common/DefaultBtn";
 import React, { useState } from "react";
 import MDEditor from "@uiw/react-md-editor";
-import { addDoc, collection, doc, setDoc } from "firebase/firestore";
+import { addDoc, collection } from "firebase/firestore";
 import { db } from "../../firebase";
 import {
   getDownloadURL,
