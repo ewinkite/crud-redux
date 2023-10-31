@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import {
   Home,
   DetailPage,
@@ -27,6 +27,7 @@ const AppRouter = ({ items }: props) => {
         <Route path="/edit/:id" element={<EditPage />} />
         <Route path="/add" element={<AddPage />} />
         <Route path="/list" element={<ListPage items={items} />} />
+        <Route path="/*" element={<Navigate to={"/"} replace />} />
       </Routes>
     </BrowserRouter>
   );
